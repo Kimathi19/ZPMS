@@ -22,6 +22,18 @@ export default function Inventory() {
   useEffect(() => {
     getTypes();
   }, []);
+  const isExpiringSoon = (expiryDate) => {
+    if (!expiryDate) return false; // Handle undefined values
+
+    const today = new Date();
+    const expDate = new Date(expiryDate);
+    const differenceInDays = Math.ceil(
+      (expDate - today) / (1000 * 60 * 60 * 24)
+    );
+
+    return differenceInDays <= 25;
+  };
+
   return (
     <>
       <AdminHeader />
@@ -70,7 +82,15 @@ export default function Inventory() {
                                 <td>{medicine.type}</td>
                                 <td>Ksh. {medicine.price}</td>
                                 <td>{medicine.stock}</td>
-                                <td>{medicine.expiry_date}</td>
+                                <td
+                                  className={
+                                    isExpiringSoon(medicine.expiry_date)
+                                      ? "table-danger"
+                                      : " "
+                                  }
+                                >
+                                  {medicine.expiry_date}
+                                </td>
                                 <td className="td-actions">
                                   <div className="form-button-action">
                                     <Link to="/updatemedicine">
@@ -82,7 +102,8 @@ export default function Inventory() {
                                             "medicine_obj",
                                             JSON.stringify(medicine)
                                           );
-                                        }}>
+                                        }}
+                                      >
                                         <i className="la la-edit"></i>
                                       </button>
                                     </Link>
@@ -91,7 +112,8 @@ export default function Inventory() {
                                       onClick={() => {
                                         handleDeleteButton(medicine.id);
                                       }}
-                                      className="btn btn-link btn-danger">
+                                      className="btn btn-link btn-danger"
+                                    >
                                       <i className="la la-times"></i>
                                     </button>
                                   </div>
