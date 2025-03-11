@@ -24,8 +24,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Visitors</p>
-                          <h4 className="card-title">1,294</h4>
+                          <p className="card-category">Total Orders Today</p>
+                          <h4 className="card-title">22</h4>
                         </div>
                       </div>
                     </div>
@@ -43,8 +43,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Sales</p>
-                          <h4 className="card-title">$ 1,345</h4>
+                          <p className="card-category">Total Sales Today</p>
+                          <h4 className="card-title">Ksh. 4,675</h4>
                         </div>
                       </div>
                     </div>
@@ -62,8 +62,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Subscribers</p>
-                          <h4 className="card-title">1303</h4>
+                          <p className="card-category">Out of Stock Items</p>
+                          <h4 className="card-title">2 items</h4>
                         </div>
                       </div>
                     </div>
@@ -81,8 +81,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Order</p>
-                          <h4 className="card-title">576</h4>
+                          <p className="card-category">Restocking</p>
+                          <h4 className="card-title">May 03 2025</h4>
                         </div>
                       </div>
                     </div>
