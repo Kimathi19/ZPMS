@@ -97,7 +97,7 @@ export default function Dashboard(props) {
                   <div className="card-body">
                     <p className="fw-bold mt-1">My Balance</p>
                     <h4>
-                      <b>$ 3,018</b>
+                      <b>Ksh. 128,350</b>
                     </h4>
                     <a href="#" className="btn btn-primary btn-full text-left mt-3 mb-3">
                       <i className="la la-plus"></i> Add Balance
@@ -125,7 +125,7 @@ export default function Dashboard(props) {
                     <div className="progress-card">
                       <div className="d-flex justify-content-between mb-1">
                         <span className="text-muted">Profit</span>
-                        <span className="text-muted fw-bold"> $3K</span>
+                        <span className="text-muted fw-bold"> Ksh. 67,980</span>
                       </div>
                       <div className="progress mb-2" style={{ height: "7px" }}>
                         <div
@@ -160,8 +160,8 @@ export default function Dashboard(props) {
                     </div>
                     <div className="progress-card">
                       <div className="d-flex justify-content-between mb-1">
-                        <span className="text-muted">Tasks Complete</span>
-                        <span className="text-muted fw-bold"> 70%</span>
+                        <span className="text-muted">Monthly supplies</span>
+                        <span className="text-muted fw-bold"> 7/10</span>
                       </div>
                       <div className="progress mb-2" style={{ height: "7px" }}>
                         <div
@@ -178,14 +178,14 @@ export default function Dashboard(props) {
                     </div>
                     <div className="progress-card">
                       <div className="d-flex justify-content-between mb-1">
-                        <span className="text-muted">Open Rate</span>
-                        <span className="text-muted fw-bold"> 60%</span>
+                        <span className="text-muted">Sales Growth</span>
+                        <span className="text-muted fw-bold"> 14%</span>
                       </div>
                       <div className="progress mb-2" style={{ height: "7px" }}>
                         <div
                           className="progress-bar bg-warning"
                           role="progressbar"
-                          style={{ width: "60%" }}
+                          style={{ width: "14%" }}
                           aria-valuenow="60"
                           aria-valuemin="0"
                           aria-valuemax="100"
@@ -200,7 +200,7 @@ export default function Dashboard(props) {
               <div className="col-md-3">
                 <div className="card card-stats">
                   <div className="card-body">
-                    <p className="fw-bold mt-1">Statistic</p>
+                    <p className="fw-bold mt-1">Monthly Statistics</p>
                     <div className="row">
                       <div className="col-5">
                         <div className="icon-big text-center icon-warning">
@@ -209,8 +209,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Number</p>
-                          <h4 className="card-title">150GB</h4>
+                          <p className="card-category">Total Stock</p>
+                          <h4 className="card-title">1120 Items</h4>
                         </div>
                       </div>
                     </div>
@@ -223,8 +223,8 @@ export default function Dashboard(props) {
                       </div>
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
-                          <p className="card-category">Followers</p>
-                          <h4 className="card-title">+45K</h4>
+                          <p className="card-category">Sales Volume</p>
+                          <h4 className="card-title">778 Units</h4>
                         </div>
                       </div>
                     </div>
