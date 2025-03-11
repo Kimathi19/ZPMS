@@ -252,20 +252,21 @@ export default function Dashboard(props) {
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <td>John</td>
+                          <td>Wafula</td>
+                          <td>@wafuuu</td>
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <td>Michael</td>
+                          <td>Olunga</td>
+                          <td>@starboyy</td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td colSpan="2">Larry the Bird</td>
-                          <td>@twitter</td>
+                          <td>Dennis</td>
+                          <td>Mwangi</td>
+                          <td>@chipaaa</td>
                         </tr>
                       </tbody>
                     </table>
@@ -310,7 +311,7 @@ export default function Dashboard(props) {
                                 </label>
                               </div>
                             </td>
-                            <td>Planning new project structure</td>
+                            <td>Process new medical insurance claims</td>
                             <td className="td-actions text-right">
                               <div className="form-button-action">
                                 <button
@@ -339,7 +340,7 @@ export default function Dashboard(props) {
                                 </label>
                               </div>
                             </td>
-                            <td>Update Fonts</td>
+                            <td>Communicate with the new supplier and order for restocking</td>
                             <td className="td-actions text-right">
                               <div className="form-button-action">
                                 <button
@@ -368,7 +369,7 @@ export default function Dashboard(props) {
                                 </label>
                               </div>
                             </td>
-                            <td>Add new Post</td>
+                            <td>Balance cash register</td>
                             <td className="td-actions text-right">
                               <div className="form-button-action">
                                 <button
@@ -397,7 +398,7 @@ export default function Dashboard(props) {
                                 </label>
                               </div>
                             </td>
-                            <td>Finalise the design proposal</td>
+                            <td>Handle customer complaints</td>
                             <td className="td-actions text-right">
                               <div className="form-button-action">
                                 <button

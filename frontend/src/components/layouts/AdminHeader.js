@@ -32,7 +32,7 @@ export default function AdminHeader(props) {
       <div className="main-header">
         <div className="logo-header">
           <Link to="/" className="logo">
-            MediCare
+            ZPMS
           </Link>
           <button
             className="navbar-toggler sidenav-toggler ml-auto"
@@ -41,7 +41,8 @@ export default function AdminHeader(props) {
             data-target="collapse"
             aria-controls="sidebar"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
           <button className="topbar-toggler more">
@@ -55,7 +56,8 @@ export default function AdminHeader(props) {
                 <a
                   href="#"
                   onClick={() => setShowDropDown(!showDropDown)}
-                  className="dropdown-toggle profile-pic">
+                  className="dropdown-toggle profile-pic"
+                >
                   {" "}
                   <img
                     src={`assets/img/profile4.jpg`}
@@ -65,7 +67,11 @@ export default function AdminHeader(props) {
                   />
                   <span>{userName !== "" ? userName : "Username"}</span>{" "}
                 </a>
-                <ul className={`dropdown-menu dropdown-user ${showDropDown ? "show" : ""}`}>
+                <ul
+                  className={`dropdown-menu dropdown-user ${
+                    showDropDown ? "show" : ""
+                  }`}
+                >
                   <li>
                     <div className="user-box">
                       <div className="u-img">
@@ -73,7 +79,9 @@ export default function AdminHeader(props) {
                       </div>
                       <div className="u-text">
                         <h4>{userName !== "" ? userName : "Username"}</h4>
-                        <p className="text-muted">{emailAddress !== "" ? emailAddress : "Email"}</p>
+                        <p className="text-muted">
+                          {emailAddress !== "" ? emailAddress : "Email"}
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -82,7 +90,11 @@ export default function AdminHeader(props) {
                     <i className="fa fa-power-off"></i> Profile
                   </Link>
                   <div className="dropdown-divider"></div>
-                  <Link className="dropdown-item" type="button" onClick={handleLogout}>
+                  <Link
+                    className="dropdown-item"
+                    type="button"
+                    onClick={handleLogout}
+                  >
                     <i className="fa fa-power-off"></i> Logout
                   </Link>
                 </ul>

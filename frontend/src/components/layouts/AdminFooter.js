@@ -9,10 +9,13 @@ export default function AdminFooter() {
           <div className="copyright ml-auto">
             {" "}
             Copyright &copy;&nbsp;
-            {new Date().getFullYear()}, made with <i className="la la-heart heart text-danger"></i>{" "}
-            by{" "}
-            <a href="https://github.com/Kimathi19" target={"_blank"}>
-             Kimathi
+            {new Date().getFullYear()}, made with 🤎 by{" "}
+            <a
+              className="text-decoration-none text-dark"
+              href="https://github.com/Kimathi19"
+              target={"_blank"}
+            >
+              Kimathi
             </a>
           </div>
         </div>

@@ -54,7 +54,7 @@ export default function AdminRegister() {
         <div className="card container col-10 col-sm-10 col-md-9 col-lg-8 mt-2 p-0 align-self-center border-success">
           <div className="card-header border-dark">
             <div className="mt-2 text-center">
-              <h3>MediCare</h3>
+              <h3>ZPMS</h3>
               <h4>Register</h4>
             </div>
           </div>
