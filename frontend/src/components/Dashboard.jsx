@@ -25,7 +25,7 @@ export default function Dashboard(props) {
                       <div className="col-7 d-flex align-items-center">
                         <div className="numbers">
                           <p className="card-category">Total Orders Today</p>
-                          <h4 className="card-title">22</h4>
+                          <h4 className="card-title">23</h4>
                         </div>
                       </div>
                     </div>
