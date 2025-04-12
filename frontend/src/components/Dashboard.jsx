@@ -2,8 +2,10 @@ import React from "react";
 import AdminHeader from "./layouts/AdminHeader";
 import AdminSideBar from "./layouts/AdminSideBar";
 import AdminFooter from "./layouts/AdminFooter";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard(props) {
+  const navigate = useNavigate();
   return (
     <>
       <AdminHeader />
@@ -99,7 +101,10 @@ export default function Dashboard(props) {
                     <h4>
                       <b>Ksh. 128,350</b>
                     </h4>
-                    <a href="#" className="btn btn-primary btn-full text-left mt-3 mb-3">
+                    <a
+                      href="#"
+                      className="btn btn-primary btn-full text-left mt-3 mb-3"
+                    >
                       <i className="la la-plus"></i> Add Balance
                     </a>
                   </div>
@@ -137,7 +142,8 @@ export default function Dashboard(props) {
                           aria-valuemax="100"
                           data-toggle="tooltip"
                           data-placement="top"
-                          title="78%"></div>
+                          title="78%"
+                        ></div>
                       </div>
                     </div>
                     <div className="progress-card">
@@ -155,7 +161,8 @@ export default function Dashboard(props) {
                           aria-valuemax="100"
                           data-toggle="tooltip"
                           data-placement="top"
-                          title="65%"></div>
+                          title="65%"
+                        ></div>
                       </div>
                     </div>
                     <div className="progress-card">
@@ -173,7 +180,8 @@ export default function Dashboard(props) {
                           aria-valuemax="100"
                           data-toggle="tooltip"
                           data-placement="top"
-                          title="70%"></div>
+                          title="70%"
+                        ></div>
                       </div>
                     </div>
                     <div className="progress-card">
@@ -191,7 +199,8 @@ export default function Dashboard(props) {
                           aria-valuemax="100"
                           data-toggle="tooltip"
                           data-placement="top"
-                          title="60%"></div>
+                          title="60%"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -232,6 +241,18 @@ export default function Dashboard(props) {
                 </div>
               </div>
             </div>
+            <div className="row mt-4">
+              <div className="col-md-12 text-right">
+                <button
+                  className="btn btn-warning"
+                  onClick={() => navigate("/inventory")}
+                >
+                  <i className="la la-print mr-1"></i>
+                  View Full Inventory
+                </button>
+              </div>
+            </div>
+
             <div className="row">
               <div className="col-md-6">
                 <div className="card">
@@ -306,7 +327,10 @@ export default function Dashboard(props) {
                             <td>
                               <div className="form-check">
                                 <label className="form-check-label">
-                                  <input className="form-check-input task-select" type="checkbox" />
+                                  <input
+                                    className="form-check-input task-select"
+                                    type="checkbox"
+                                  />
                                   <span className="form-check-sign"></span>
                                 </label>
                               </div>
@@ -318,14 +342,16 @@ export default function Dashboard(props) {
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Edit Task"
-                                  className="btn btn-link <btn-simple-primary">
+                                  className="btn btn-link <btn-simple-primary"
+                                >
                                   <i className="la la-edit"></i>
                                 </button>
                                 <button
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Remove"
-                                  className="btn btn-link btn-simple-danger">
+                                  className="btn btn-link btn-simple-danger"
+                                >
                                   <i className="la la-times"></i>
                                 </button>
                               </div>
@@ -335,26 +361,34 @@ export default function Dashboard(props) {
                             <td>
                               <div className="form-check">
                                 <label className="form-check-label">
-                                  <input className="form-check-input task-select" type="checkbox" />
+                                  <input
+                                    className="form-check-input task-select"
+                                    type="checkbox"
+                                  />
                                   <span className="form-check-sign"></span>
                                 </label>
                               </div>
                             </td>
-                            <td>Communicate with the new supplier and order for restocking</td>
+                            <td>
+                              Communicate with the new supplier and order for
+                              restocking
+                            </td>
                             <td className="td-actions text-right">
                               <div className="form-button-action">
                                 <button
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Edit Task"
-                                  className="btn btn-link <btn-simple-primary">
+                                  className="btn btn-link <btn-simple-primary"
+                                >
                                   <i className="la la-edit"></i>
                                 </button>
                                 <button
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Remove"
-                                  className="btn btn-link btn-simple-danger">
+                                  className="btn btn-link btn-simple-danger"
+                                >
                                   <i className="la la-times"></i>
                                 </button>
                               </div>
@@ -364,7 +398,10 @@ export default function Dashboard(props) {
                             <td>
                               <div className="form-check">
                                 <label className="form-check-label">
-                                  <input className="form-check-input task-select" type="checkbox" />
+                                  <input
+                                    className="form-check-input task-select"
+                                    type="checkbox"
+                                  />
                                   <span className="form-check-sign"></span>
                                 </label>
                               </div>
@@ -376,14 +413,16 @@ export default function Dashboard(props) {
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Edit Task"
-                                  className="btn btn-link <btn-simple-primary">
+                                  className="btn btn-link <btn-simple-primary"
+                                >
                                   <i className="la la-edit"></i>
                                 </button>
                                 <button
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Remove"
-                                  className="btn btn-link btn-simple-danger">
+                                  className="btn btn-link btn-simple-danger"
+                                >
                                   <i className="la la-times"></i>
                                 </button>
                               </div>
@@ -393,7 +432,10 @@ export default function Dashboard(props) {
                             <td>
                               <div className="form-check">
                                 <label className="form-check-label">
-                                  <input className="form-check-input task-select" type="checkbox" />
+                                  <input
+                                    className="form-check-input task-select"
+                                    type="checkbox"
+                                  />
                                   <span className="form-check-sign"></span>
                                 </label>
                               </div>
@@ -405,14 +447,16 @@ export default function Dashboard(props) {
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Edit Task"
-                                  className="btn btn-link <btn-simple-primary">
+                                  className="btn btn-link <btn-simple-primary"
+                                >
                                   <i className="la la-edit"></i>
                                 </button>
                                 <button
                                   type="button"
                                   data-toggle="tooltip"
                                   title="Remove"
-                                  className="btn btn-link btn-simple-danger">
+                                  className="btn btn-link btn-simple-danger"
+                                >
                                   <i className="la la-times"></i>
                                 </button>
                               </div>
@@ -424,7 +468,8 @@ export default function Dashboard(props) {
                   </div>
                   <div className="card-footer ">
                     <div className="stats">
-                      <i className="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                      <i className="now-ui-icons loader_refresh spin"></i>{" "}
+                      Updated 3 minutes ago
                     </div>
                   </div>
                 </div>

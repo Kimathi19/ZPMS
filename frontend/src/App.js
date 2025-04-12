@@ -14,6 +14,11 @@ import UpdateType from "./components/UpdateType";
 import Inventory from "./components/Inventory";
 import AddMedicine from "./components/AddMedicine";
 import UpdateMedicine from "./components/UpdateMedicine";
+import NewTransaction from "./pages/NewTransaction";
+import Receipts from "./pages/Receipts";
+import Sales from "./pages/Sales";
+
+
 
 function App() {
 
@@ -33,6 +38,10 @@ function App() {
         <Route exact path="/inventory" element={<Inventory />} />
         <Route exact path="/addmedicine" element={<AddMedicine />} />
         <Route exact path="/updatemedicine" element={<UpdateMedicine />} />
+        <Route exact path="/transactions" element={<NewTransaction />} />
+        <Route exact path="/receipts" element={<Receipts />} />
+        <Route exact path="/receipt/:transactionId" element={<Receipts />} />
+        <Route exact path="/sales" element={<Sales />} />
       </Routes>
     </BrowserRouter>
   );

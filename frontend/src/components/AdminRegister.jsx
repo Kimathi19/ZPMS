@@ -11,6 +11,7 @@ export default function AdminRegister() {
         navigate("/");
       }
     });
+    
   }, []);
   const [values, setValues] = useState({
     name: "",
