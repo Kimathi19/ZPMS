@@ -5,48 +5,77 @@ import { auth } from "../firebase";
 
 export default function AdminRegister() {
   const navigate = useNavigate();
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         navigate("/");
       }
     });
-    
   }, []);
+
   const [values, setValues] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
+
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleSubmission = () => {
-    if (values.name && values.email && values.password && values.confirmPassword) {
-      setErrorMsg("");
-      if (values.password === values.confirmPassword) {
-        createUserWithEmailAndPassword(auth, values.email, values.password)
-          .then(async (response) => {
-            const user = response.user;
-            await updateProfile(user, {
-              displayName: values.name,
-            });
-            setSuccessMsg("Registration done successfully!");
-            setTimeout(() => {
-              setSuccessMsg("");
-              navigate("/");
-            }, 3000);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else {
-        setErrorMsg("Passwords don't match!");
-      }
-    } else {
-      setErrorMsg("Please fill out all required fields");
+    const { name, email, password, confirmPassword } = values;
+
+    // Basic field check
+    if (!name || !email || !password || !confirmPassword) {
+      setErrorMsg("Please fill out all required fields.");
+      return;
     }
+
+    // Password strength check
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    if (!passwordRegex.test(password)) {
+      setErrorMsg(
+        "Password must be at least 6 characters and include letters and numbers."
+      );
+      return;
+    }
+
+    // Password match check
+    if (password !== confirmPassword) {
+      setErrorMsg("Passwords do not match.");
+      return;
+    }
+
+    // Clear errors before Firebase call
+    setErrorMsg("");
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(async (response) => {
+        const user = response.user;
+        await updateProfile(user, {
+          displayName: name,
+        });
+        setSuccessMsg("Registration done successfully!");
+        setTimeout(() => {
+          setSuccessMsg("");
+          navigate("/");
+        }, 3000);
+      })
+      .catch((err) => {
+        // Firebase error messages
+        if (err.code === "auth/email-already-in-use") {
+          setErrorMsg("This email is already in use.");
+        } else if (err.code === "auth/invalid-email") {
+          setErrorMsg("Invalid email address.");
+        } else if (err.code === "auth/weak-password") {
+          setErrorMsg("Password is too weak.");
+        } else {
+          setErrorMsg("Registration failed. Please try again.");
+        }
+        console.error(err);
+      });
   };
 
   return (
@@ -55,7 +84,7 @@ export default function AdminRegister() {
         <div className="card container col-10 col-sm-10 col-md-9 col-lg-8 mt-2 p-0 align-self-center border-success">
           <div className="card-header border-dark">
             <div className="mt-2 text-center">
-              <h3>ZPMS</h3>
+              <h3>Pharmacy Management System</h3>
               <h4>Register</h4>
             </div>
           </div>
@@ -68,7 +97,9 @@ export default function AdminRegister() {
                   className="form-control"
                   id="name"
                   placeholder="Full Name"
-                  onChange={(event) => setValues((prev) => ({ ...prev, name: event.target.value }))}
+                  onChange={(event) =>
+                    setValues((prev) => ({ ...prev, name: event.target.value }))
+                  }
                 />
               </div>
               <div className="form-group">
@@ -80,7 +111,10 @@ export default function AdminRegister() {
                   aria-describedby="emailHelp"
                   placeholder="Email Address"
                   onChange={(event) =>
-                    setValues((prev) => ({ ...prev, email: event.target.value }))
+                    setValues((prev) => ({
+                      ...prev,
+                      email: event.target.value,
+                    }))
                   }
                 />
               </div>
@@ -92,7 +126,10 @@ export default function AdminRegister() {
                   id="exampleInputPassword1"
                   placeholder="Password"
                   onChange={(event) =>
-                    setValues((prev) => ({ ...prev, password: event.target.value }))
+                    setValues((prev) => ({
+                      ...prev,
+                      password: event.target.value,
+                    }))
                   }
                 />
               </div>
@@ -104,17 +141,21 @@ export default function AdminRegister() {
                   id="exampleInputPassword2"
                   placeholder="Confirm Password"
                   onChange={(event) =>
-                    setValues((prev) => ({ ...prev, confirmPassword: event.target.value }))
+                    setValues((prev) => ({
+                      ...prev,
+                      confirmPassword: event.target.value,
+                    }))
                   }
                 />
               </div>
-              <div className="text-center text-danger">{errorMsg}</div>
-              <div className="text-center text-success">{successMsg}</div>
+              <div className="text-center text-danger mt-2">{errorMsg}</div>
+              <div className="text-center text-success mt-2">{successMsg}</div>
               <div className="form-group mt-4">
                 <button
                   type="submit"
                   onClick={handleSubmission}
-                  className="btn btn-success btn-block">
+                  className="btn btn-success btn-block"
+                >
                   Register
                 </button>
               </div>

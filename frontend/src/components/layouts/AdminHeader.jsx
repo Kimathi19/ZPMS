@@ -32,7 +32,7 @@ export default function AdminHeader(props) {
       <div className="main-header">
         <div className="logo-header">
           <Link to="/" className="logo">
-            ZPMS
+            Pharmacy Management
           </Link>
           <button
             className="navbar-toggler sidenav-toggler ml-auto"

@@ -42,7 +42,7 @@ export default function AdminLogin() {
         <div className="card container col-10 col-sm-10 col-md-9 col-lg-8 mt-5 p-0 align-self-center border-primary">
           <div className="card-header border-darks">
             <div className="mt-2 text-center">
-              <h3>ZPMS</h3>
+              <h3>Pharmacy Management System</h3>
               <h4>Welcome Back!</h4>
             </div>
           </div>
