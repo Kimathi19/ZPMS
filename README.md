@@ -132,7 +132,7 @@ ZPMS is ideal for:
 ## Contributors
 
 * **Brian Kimathi** – System Design & Development
-* **Mark Mogire** – System Design & Development
+* **Mark Mogire** – System Design & Development - https://github.com/MOGIRE11
 
 ---
 
