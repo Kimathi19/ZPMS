@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Zin Pharmacy Management System (ZPMS)** is a web-based pharmacy management solution developed to streamline day-to-day pharmacy operations. The system was designed and implemented as an academic and practical project, focusing on improving efficiency, accuracy, and accountability in pharmacy workflows.
+The **Zin Pharmacy Management System (ZPMS)** is a web-based pharmacy management solution developed to streamline day-to-day pharmacy operations. The system was designed and implemented as an academic degree thesis and practical project, focusing on improving efficiency, accuracy and accountability in pharmacy workflows.
 
 ZPMS centralizes core pharmacy processes such as product management, sales transactions, and record keeping, reducing reliance on manual methods and minimizing operational errors.
 
@@ -10,7 +10,7 @@ ZPMS centralizes core pharmacy processes such as product management, sales trans
 
 ## Project Objectives
 
-The main objectives of ZPMS were to:
+The main objectives of ZPMS are to:
 
 * Automate pharmacy sales and transaction processing
 * Improve accuracy in stock handling and record keeping
