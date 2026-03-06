@@ -144,4 +144,6 @@ This project was developed for academic and learning purposes. Redistribution or
 
 ## Acknowledgements
 
-GOD IS THE GREATEST
+Thank God for GPT-4 and Gemini 2.0
+Bootstrap dashboard sourced from another github repo (not mine)
+
